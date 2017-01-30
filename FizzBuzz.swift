@@ -1,13 +1,16 @@
 func fizzBuzzGame(upTo: Int) {
     for i in 1...upTo {
-        if i % 3 == 0 || i % 5 == 0{
-            print("\(i) is fuzz")
-            if i % 3 == 0 && i % 5 == 0 {
-                print("\(i) is fuzz and buzz")
-            }
+        if i % 3 == 0 {
+            print("Fizz")
         }
-        else {
-            print("\(i) is neither.")
+        if i % 5 == 0 {
+            print("Buzz")
+        }
+        if i % 5 == 0 && i % 3 == 0 {
+            print("Fizz Buzz")
+        }
+        if i % 3 != 0 && i % 5 != 0{
+            print("\(i)")
         }
     }
 }
