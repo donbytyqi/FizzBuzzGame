@@ -1,18 +1,17 @@
 func fizzBuzzGame(upTo: Int) {
     for i in 1...upTo {
+        var value = ""
         if i % 3 == 0 {
-            print("Fizz")
+            value += "Fizz "
         }
         if i % 5 == 0 {
-            print("Buzz")
+            value += "Buzz"
         }
-        if i % 5 == 0 && i % 3 == 0 {
-            print("Fizz Buzz")
+        if value.isEmpty {
+            value += "\(i)"
         }
-        if i % 3 != 0 && i % 5 != 0{
-            print("\(i)")
-        }
+        print(value)
     }
 }
 
-fizzBuzzGame(upTo: 10)
+fizzBuzzGame(upTo: 20)
